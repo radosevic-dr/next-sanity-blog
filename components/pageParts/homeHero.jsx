@@ -7,8 +7,8 @@ export const HomeHero = () => {
     return (
         <div className={style.homeHeroContainer}>
             <div className={style.homeHeroText}>
-                <h1>Code Unleashed, Nature Explored: </h1>
-                <p>Welcome to CodeWilderness.me, the junction where lines of code intersect with untamed terrains. Immerse yourself in the dual thrill of coding innovation and outdoor exploration, and witness how technology and nature coalesce to create an unforgettable journey.</p>
+                <h1>Lorem Ipsum </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi voluptate, mollitia laboriosam enim molestiae vel optio. Quibusdam cum quis eaque, delectus corporis voluptates? Laudantium nemo alias officia eaque enim blanditiis.</p>
                 <div className={style.homeHeroLinks}>
                     <Link href="/dev">Unleash Code</Link>
                     <Link href="/blog">Explore Nature</Link>

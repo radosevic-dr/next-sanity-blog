@@ -11,8 +11,8 @@ export default async function HomePage() {
     return (
         <main className={style.homePageContainer}>
             <HomeHero />
-            <HomePosts title="Dive into the World of Code" posts={devPosts} urlPath="dev" />
-            <HomePosts title="Embrace the Wilderness: Newest Outdoor Insights" posts={blogPosts} urlPath="blog" />
+            <HomePosts title="Education - code based content here" posts={devPosts} urlPath="dev" />
+            <HomePosts title="Blog with mixed content here" posts={blogPosts} urlPath="blog" />
             <Contact />
         </main>
     );
