@@ -1,0 +1,72 @@
+@import "../../variables/colors";
+@import "../../variables/screenSizes";
+@import "../../abstracts/mixins";
+
+.homeHeroContainer {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.homeHeroText {
+    @include flexCol;
+    padding: auto 2rem;
+    width: 70%;
+    margin: auto;
+    gap: 3rem;
+    line-height: 3rem;
+
+    h1 {
+        @include headingOne;
+    }
+
+    p {
+        @include paragraph;
+    }
+
+    @media screen and (min-width: $sm) {
+        width: 50%;
+        padding: 0 2rem;
+    }
+
+}
+
+.homeHeroLinks {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    a {
+        display: inline-block;
+        padding: 1rem auto;
+        font-size: large;
+
+        &:first-of-type {
+            @include linkBorder($my-success, $my-secondary);
+
+        }
+
+        &:last-of-type {
+            @include linkBorder($my-textHeader, $my-secondary);
+
+        }
+    }
+}
+
+.homeHeroImage {
+    align-self: center;
+    width: 50%;
+
+    .heroImage {
+        display: block;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (max-width: $sm) {
+        display: none
+    }
+}

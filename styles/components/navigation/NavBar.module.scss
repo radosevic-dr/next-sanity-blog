@@ -1,0 +1,30 @@
+@import "../../variables/colors";
+@import "../../variables/screenSizes";
+
+.navContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+    height: 8rem;
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(2rem);
+
+    &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $my-success;
+    }
+}

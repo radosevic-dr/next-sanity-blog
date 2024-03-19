@@ -1,0 +1,14 @@
+@import "../variables/colors";
+@import "../variables/screenSizes";
+
+.baseLayout {
+    background-color: $my-secondary;
+    max-width: 144rem;
+    margin: 8rem auto 0;
+    height: 100vh;
+
+    &::-webkit-scrollbar {
+        background: $my-textHeader;
+        border: 1px solid $my-success;
+    }
+}

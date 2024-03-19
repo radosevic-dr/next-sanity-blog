@@ -1,0 +1,74 @@
+@import "../../variables/colors";
+@import "../../variables/screenSizes";
+
+.cardBody {
+    margin-top: 2rem;
+
+    .cardTitle {
+        margin-bottom: 1rem;
+        padding: auto 1rem;
+        color: $my-success;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .cardDescription {
+        font-size: large;
+    }
+
+    .readMore {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        .cardLink {
+            display: block;
+            width: 50%;
+            margin: 3rem auto 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            color: $my-secondary;
+            background-color: $my-success;
+            text-align: center;
+            border-radius: 1rem;
+            transition: all .3s linear;
+            font-size: medium;
+            font-weight: bold;
+        }
+    }
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 50rem;
+    margin: 2rem;
+    padding: .4rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: $my-secondary;
+    color: $my-info;
+    transition: all .3s linear;
+
+    &:hover {
+        scale: 1.1;
+        background-color: $my-info;
+        color: $my-secondary;
+
+        .cardLink {
+            color: $my-success;
+            background-color: $my-secondary;
+        }
+    }
+}
+
+.imageContainer {
+    margin-top: 1rem;
+
+    .cardImage {
+        width: 100%
+    }
+}

@@ -1,0 +1,87 @@
+@import "../../variables/colors";
+@import "../../variables/screenSizes";
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+
+    .postImageContainer {
+        width: 100%;
+        max-width: 70rem;
+        margin: 6rem auto 0;
+
+        .postImage {
+            width: 100%;
+            margin: auto;
+        }
+    }
+}
+
+.postTitle {
+    margin: 1rem auto;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: $my-textHeader;
+}
+
+.blockContent {
+    width: 100%;
+    padding: 0 .5rem;
+    max-width: 70rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+
+    p {
+        color: #94a3b8;
+        margin: 1rem auto;
+        font-size: large;
+    }
+
+    ul,
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin-left: 3rem;
+    }
+
+
+    li {
+        padding: .5rem 1rem;
+        color: $my-info;
+        font-size: medium;
+
+        ul,
+        ol {
+            margin-left: 2rem;
+        }
+    }
+
+    h2,
+    h3 {
+        margin: 2rem auto;
+        font-size: large;
+        color: #e3d664;
+    }
+
+    h4,
+    h5 {
+        font-size: large;
+        margin: 1rem 0;
+        color: $my-textParagraph;
+    }
+
+    h2 {
+        color: salmon;
+    }
+
+    h3 {
+        color: salddlebrown;
+    }
+}

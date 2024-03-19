@@ -1,0 +1,33 @@
+@import "../variables/colors";
+@import "../variables/screenSizes";
+
+@mixin linkBorder($mainColor, $secondaryColor) {
+    color: $mainColor;
+    border: 1px solid $mainColor;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+
+    &:hover,
+    &:active {
+        border: none;
+        color: $secondaryColor;
+        background-color: $mainColor;
+    }
+}
+
+
+@mixin flexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin headingOne {
+    font-size: x-large;
+    font-weight: bold;
+    color: $my-textHeader;
+}
+
+@mixin paragraph {
+    font-size: large;
+    color: $my-textParagraph;
+}

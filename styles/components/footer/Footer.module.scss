@@ -1,0 +1,28 @@
+@import "../../variables/colors";
+
+.footerContainer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: large;
+    color: $my-textHeader;
+    width: 100%;
+    background-color: $my-primary;
+    text-align: center;
+    padding: 2rem;
+    letter-spacing: 1px;
+}
+
+.company {
+    letter-spacing: .2rem;
+}
+
+.ja {
+    font-size: 1.2rem;
+    color: $my-success;
+    text-align: center;
+    margin-top: 2rem;
+
+    a {
+        color: $my-info;
+    }
+}

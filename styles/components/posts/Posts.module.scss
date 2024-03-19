@@ -1,0 +1,34 @@
+@import "../../variables/colors";
+@import "../../variables/screenSizes";
+
+.postsContainer {
+    width: 100%;
+    margin: 13rem auto 0;
+}
+
+.postsTitle {
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    padding-bottom: 3rem;
+    color: $my-textHeader;
+}
+
+.postsContent {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.25rem;
+    justify-items: center;
+
+    @media screen and (min-width: $sm) {
+        & {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        & {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+}

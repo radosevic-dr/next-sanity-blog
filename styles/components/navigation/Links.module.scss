@@ -1,0 +1,93 @@
+@import "../../variables/colors";
+@import "../../variables/screenSizes";
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-10rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.linksContainer {
+    display: flex;
+    font-size: large;
+    text-align: center;
+
+    a {
+        color: $my-success;
+
+        &:link,
+        &:visited {
+            transition: all .5s;
+            background-image: linear-gradient(120deg, transparent, transparent, $my-success 50%);
+            text-decoration: none;
+            background-size: 450%;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $my-secondary;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+
+    .hideNav {
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .showNav {
+        flex-direction: column;
+        position: absolute;
+        height: 80vh;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        background-color: $my-primary;
+        backdrop-filter: blur(.5rem);
+
+        a {
+            display: inline-block;
+            width: 100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+        }
+    }
+
+
+}
+
+@media screen and (min-width: $sm) {
+    .linksContainer {
+        animation: 1s ease-in slideIn;
+
+        a {
+            display: inline-block;
+            padding: .5rem 2rem;
+
+
+            &:hover {
+                border-radius: 1rem;
+            }
+        }
+
+        :not(a:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}

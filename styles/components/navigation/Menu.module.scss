@@ -1,0 +1,16 @@
+@import "../../variables/screenSizes";
+@import "../../variables/colors";
+
+
+.menuContainer {
+    .menuItem {
+        color: $my-success;
+        font-size: x-large;
+        transition: all ease-in;
+
+    }
+
+    @media screen and (min-width: $sm) {
+        display: none;
+    }
+}

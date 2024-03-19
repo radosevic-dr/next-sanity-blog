@@ -1,0 +1,157 @@
+@import "../../variables/colors";
+@import "../../variables/screenSizes";
+
+.pageContact {
+    margin-top: 13rem;
+}
+
+.contactContainer {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    // background-image: url("/Symbiot 2.png");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // backdrop-filter: blur(50px);
+}
+
+.contactTitle {
+    width: 100%;
+    text-align: center;
+    margin: 3rem auto;
+    color: $my-textHeader;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.imageBox {
+    display: none;
+    z-index: -1;
+
+    @media screen and (min-width: $sm) {
+        display: block;
+        position: absolute;
+        top: 5rem;
+        right: 7rem;
+        border: 1px solid $my-success;
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    input,
+    textarea,
+    button {
+        border-radius: .5rem;
+        border: none;
+    }
+
+    input,
+    textarea {
+        background-color: rgba($my-info, 0.2);
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem gray;
+            border-bottom: 2px solid $my-success;
+        }
+    }
+
+    input,
+    textarea {
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem;
+        color: white;
+    }
+
+    .inputGroup {
+        width: 100%;
+
+        // Input & Label style
+
+        input,
+        label {
+            display: block;
+            width: 100%;
+        }
+
+        // Input Style
+
+        input {
+            &::-webkit-input-placeholder {
+                color: rgba($my-success, 0.4);
+            }
+        }
+
+        // // Label Style
+
+        // label {
+        //     font-size: 1.5rem;
+        //     transition: all .3s;
+        //     margin-top: .7rem;
+        //     color: white;
+        // }
+
+        // input:placeholder-shown+label {
+        //     opacity: 0;
+        //     visibility: hidden;
+        //     transform: translateY(-4rem);
+        // }
+    }
+
+    // Textarea
+
+    .textareaGroup {
+        width: 100%;
+
+        textarea {
+            width: 100%;
+        }
+    }
+
+    .contactBtn {
+        width: 30%;
+        margin: auto;
+        padding: 1.5rem 1rem;
+        border: 1px solid $my-success;
+        color: $my-success;
+        background-color: transparent;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &:hover {
+            border: none;
+            background-color: $my-success;
+            color: $my-secondary;
+        }
+    }
+
+    @media screen and (min-width: $sm) {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+// Error style
+
+.errorShow {
+    padding-top: .25rem;
+    visibility: visible;
+    color: $my-textHeader;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.errorHide {
+    visibility: hidden;
+}
